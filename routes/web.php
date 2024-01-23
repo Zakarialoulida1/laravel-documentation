@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\homecontroller;
+use App\Http\Controllers\informationcontroller;
+use App\Http\Controllers\profilcontroller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Descrip;
@@ -23,7 +25,8 @@ use App\Models\Descrip;
 // );
 // });
 Route::get('/description/{name}/{id}', [homecontroller::class,'index']);   //instead of that 'App\Http\Controllers\homecontroller' we do homecontroller::class
-
+Route::get('/information',[informationcontroller::class,'index']);
+Route::get('/profil',[profilcontroller::class,'index']);
 
 
 // Route::get('/description/{id}',function($id){

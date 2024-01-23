@@ -1,3 +1,6 @@
+
+{{--to do comments in blade it's better to do it like this way to make it confidential--}}
+@extends('layouts.master')
 <h1>hi {{ $person['name'] . ' ' . $person['id'] }}</h1>
 @unless (count($languages) < 0)
 

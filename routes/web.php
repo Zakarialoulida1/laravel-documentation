@@ -27,6 +27,9 @@ use App\Models\Descrip;
 Route::get('/home', [homecontroller::class,'index'])->name('home.index')  ; //instead of that 'App\Http\Controllers\homecontroller' we do homecontroller::class
 Route::get('/information',[informationcontroller::class,'index'])->name('setting.index');
 Route::get('/profil',[profilcontroller::class,'index'])->name('profil.index');
+Route::get('/profil/{id}',[profilcontroller::class,'show'])->name('profil.show')
+->where('id','\d+');
+
 
 
 // Route::get('/description/{id}',function($id){

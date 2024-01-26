@@ -6,6 +6,7 @@
     <th>name</th>
     <th>email</th>
     <th>bio</th>
+    <th>Actions</th>
    </tr>
    
     @foreach ($profiles as $profil)
@@ -14,6 +15,7 @@
     <td>{{$profil->name}}</td>
     <td>{{$profil->email}}</td>
     <td>{{Str::limit($profil->bio,50)}}</td> 
+    <td><a href="{{route('profil.show',$profil->id)}}" class="btn btn-primary"  role="button" >Afficher plus</a></td>
     {{-- the third param in str:: limit defin (... orother) ***vous pouvez ecrire autre que 3 points ' --}}
 </tr>
         

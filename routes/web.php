@@ -24,9 +24,9 @@ use App\Models\Descrip;
 //     ]
 // );
 // });
-Route::get('/description/{name}/{id}', [homecontroller::class,'index']);   //instead of that 'App\Http\Controllers\homecontroller' we do homecontroller::class
-Route::get('/information',[informationcontroller::class,'index']);
-Route::get('/profil',[profilcontroller::class,'index']);
+Route::get('/home', [homecontroller::class,'index'])->name('home.index')  ; //instead of that 'App\Http\Controllers\homecontroller' we do homecontroller::class
+Route::get('/information',[informationcontroller::class,'index'])->name('setting.index');
+Route::get('/profil',[profilcontroller::class,'index'])->name('profil.index');
 
 
 // Route::get('/description/{id}',function($id){

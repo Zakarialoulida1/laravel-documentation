@@ -1,11 +1,31 @@
 @once
-    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">social</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link"  href="{{route('home.index')}}">ACCEUIL <span class="sr-only">(current)</span></a>
+     
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('setting.index')}}">Mes informations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('profil.index')}}">Tous les profil</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('profil.index')}}">Mon profil</a>
+        </li>
+      </ul>
+    </div>
+  </nav> 
+  
 
-<nav>
-    <a href="">ACCEUIL</a>
-    <a href="/information">Mes informations</a>
-    <a href="/profil">Mon profil</a>
-</nav>
-<script></script>
+
+
+
 
 @endonce

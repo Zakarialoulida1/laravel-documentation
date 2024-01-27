@@ -24,12 +24,16 @@ use App\Models\Descrip;
 //     ]
 // );
 // });
+
+/************take care that all the routes who have dynamic params must be in the end because sometime it can cause problems************* */
 Route::get('/home', [homecontroller::class,'index'])->name('home.index')  ; //instead of that 'App\Http\Controllers\homecontroller' we do homecontroller::class
 Route::get('/information',[informationcontroller::class,'index'])->name('setting.index');
 Route::get('/profil',[profilcontroller::class,'index'])->name('profil.index');
-Route::get('/profil/{id}',[profilcontroller::class,'show'])->name('profil.show')
-->where('id','\d+');
 
+Route::get('/profil/{profil}',[profilcontroller::class,'show'])->name('profil.show')
+->where('profil','\d+'); //profil:name to specify wich column we want to search by if not specified they take id by default or the return from the function  getRouteKeyName if it was changed and it must to choose something unique
+Route::get('/profil/create',[profilcontroller::class,'create'])->name('create');
+Route::post('/profil/store',[profilcontroller::class,'store'])->name('store');
 
 
 // Route::get('/description/{id}',function($id){

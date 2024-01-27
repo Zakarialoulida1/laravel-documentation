@@ -17,7 +17,7 @@
           <a class="nav-link" href="{{route('profil.index')}}">Tous les profil</a>
       </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('profil.index')}}">Mon profil</a>
+            <a class="nav-link" href="{{route('create')}}">Ajouter profil</a>
         </li>
       </ul>
     </div>

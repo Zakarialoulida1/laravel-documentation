@@ -28,7 +28,7 @@ class profilesFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'password' => static::$password ??= Hash::make('password'),
 
-            'bio'=>fake()->text(70)
+            'bio'=>fake()->text(200)
         ];
     }
 }

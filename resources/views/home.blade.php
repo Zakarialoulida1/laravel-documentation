@@ -1,12 +1,12 @@
 {{-- to do comments in blade it's better to do it like this way to make it confidential --}}
 <x-master title="page dacueil">
 
-<x-componentslot-exemple type='success'>
+<x-alert type='success'>
     <strong>salam</strong>
-</x-componentslot-exemple>
-<x-componentslot-exemple type='warning'>
+</x-alert>
+<x-alert type='warning'>
     <strong>warning</strong>
-</x-componentslot-exemple>
+</x-alert>
 <x-tablecomponent :users="$users" />
 
 </x-master>

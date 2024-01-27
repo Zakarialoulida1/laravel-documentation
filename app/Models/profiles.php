@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class profiles extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'name','email','password','bio'
+    ];
+
+    public function getRouteKeyName()
+    {
+        return 'id';   //by default return the id
+    }
 }
